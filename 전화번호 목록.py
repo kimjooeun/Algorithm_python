@@ -1,3 +1,4 @@
+# 풀이 1
 def solution(phone_book):
     phone_book = list(map(str, phone_book))
 
@@ -16,3 +17,11 @@ def solution(phone_book):
     else:
         return True
 
+# 풀이 2
+def solution(phone_book):
+    answer = True
+    phone_book.sort()
+    for i in range(len(phone_book)-1):
+        if phone_book[i] in (phone_book[i+1]):
+                return False
+    return answer
